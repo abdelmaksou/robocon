@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Robocon</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_led_control">ledControl</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="connect_to_your_car">Connect to your car :</string>
+</resources>

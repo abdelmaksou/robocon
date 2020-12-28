@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:layoutDirection="ltr"
+    android:weightSum="5"
+    tools:context="com.abdelmaksoud.robocon.Control">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/left"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/left_arrow"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="105dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/frwrd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="70dp"
+                    android:src="@drawable/forward_arrow"
+                    app:layout_constraintBottom_toTopOf="@+id/bckwrd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/bckwrd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="105dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/backward_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frwrd"
+                    app:layout_constraintVertical_bias="0.848" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/right"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="105dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2.2">
+
+        <LinearLayout
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/cnctbtn"
+            android:visibility="visible"></LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/flash_on"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/flash_on"
+                tools:layout_editor_absoluteX="530dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:layout_marginBottom="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/flash_off"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/flash_off"
+                tools:layout_editor_absoluteX="508dp"
+                tools:layout_editor_absoluteY="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                />
+            <ImageView
+                android:id="@+id/on"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/on"
+                tools:layout_editor_absoluteX="508dp"
+                tools:layout_editor_absoluteY="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/off"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/off"
+                tools:layout_editor_absoluteX="508dp"
+                tools:layout_editor_absoluteY="68dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                />
+            <LinearLayout
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/cnctbtn"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"></LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1.4"
+        android:weightSum="3"
+        android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/shoot"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/shoot"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="105dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/through"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="70dp"
+                android:src="@drawable/through"
+                app:layout_constraintBottom_toTopOf="@+id/pass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/pass"
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/pass"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/through"
+                app:layout_constraintVertical_bias="0.848" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/loob"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/loob"
+                tools:layout_editor_absoluteX="225dp"
+                tools:layout_editor_absoluteY="105dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
